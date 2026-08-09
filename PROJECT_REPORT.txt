@@ -1,0 +1,297 @@
+KOLKATA SCHOOL EDUCATION ANALYTICS DASHBOARD Project Report
+
+Prepared by: Pritwish Saha Project Type: Data Analytics / Power BI
+Tools: Power BI, Power Query, DAX, CSV
+
+============================================================ 1. ABSTRACT
+============================================================
+
+The Kolkata School Education Analytics Dashboard is a Power BI-based
+data analytics project developed to analyze the distribution of schools
+and students across different boroughs and wards of Kolkata.
+
+The project uses school-level data containing information such as school
+code, school address, borough, ward number, school type, classes, and
+number of students. The raw data was transformed and analyzed using
+Power Query, DAX, and Power BI visualizations.
+
+The final dashboard provides an interactive overview of school and
+student distribution, allowing users to compare boroughs and wards,
+analyze school types, and understand schools based on their student
+population.
+
+============================================================ 2.
+INTRODUCTION
+============================================================
+
+Education infrastructure is an important part of urban development.
+Kolkata contains schools distributed across different municipal boroughs
+and wards. Understanding how schools and students are distributed can
+provide useful insights into the city’s education infrastructure.
+
+Raw educational datasets can be difficult to interpret directly. This
+project transforms the raw school data into an interactive Power BI
+dashboard so that important patterns and comparisons can be understood
+more easily.
+
+============================================================ 3. PROBLEM
+STATEMENT ============================================================
+
+The Kolkata school dataset contains information about schools, wards,
+boroughs, school types, classes, and student populations. The objective
+is to organize and visualize this information in a way that makes it
+easy to understand school distribution and student concentration across
+Kolkata.
+
+============================================================ 4. PROJECT
+OBJECTIVES ============================================================
+
+1.  Analyze the total number of schools.
+2.  Analyze the total student population.
+3.  Compare school distribution across wards.
+4.  Compare student populations across boroughs.
+5.  Analyze school ownership/type.
+6.  Analyze student distribution across schools.
+7.  Categorize schools according to student population.
+8.  Build an interactive Power BI dashboard.
+9.  Convert raw educational data into meaningful analytical insights.
+
+============================================================ 5. DATASET
+DESCRIPTION ============================================================
+
+The project uses the Kolkata_Schools dataset.
+
+Important fields include:
+
+-   SL No: Serial number of the record.
+-   Borough: Municipal borough identifier.
+-   Ward No: Municipal ward number.
+-   School Code: School identifier/code.
+-   School Address: Address of the school.
+-   School Type: Type/ownership of the school.
+-   Classes: Classes offered by the school.
+-   No of Students: Number of students in the school.
+
+Dashboard-level summary:
+
+-   Total Schools: 259
+-   Total Students: Approximately 28K
+-   Total Boroughs: 15
+-   Total Wards: 106
+
+These values are based on the current Power BI dashboard.
+
+============================================================ 6. TOOLS
+AND TECHNOLOGIES
+============================================================
+
+Power BI - Dashboard development - Interactive visualizations -
+Filtering and report presentation
+
+Power Query - Data cleaning - Data transformation - Data type
+correction - Custom column creation
+
+DAX - KPI calculations - Aggregation measures - Analytical calculations
+
+CSV - Source data format
+
+============================================================ 7. DATA
+CLEANING AND TRANSFORMATION
+============================================================
+
+The dataset was prepared before visualization.
+
+Main data preparation activities include:
+
+-   Checking data types.
+-   Ensuring No of Students is numeric.
+-   Keeping School Code as text because it contains codes such as
+    001/001/BD.
+-   Cleaning unnecessary spaces from text fields.
+-   Checking missing or inconsistent values.
+-   Preparing categorical fields for visualization.
+-   Creating a Student_Size classification using Power Query.
+
+Student_Size categories:
+
+-   Very Small: 0-50 students
+-   Small: 51-100 students
+-   Medium: 101-150 students
+-   Large: 151-200 students
+-   Very Large: 200+ students
+
+============================================================ 8. DAX
+MEASURES ============================================================
+
+Total Schools:
+
+Total Schools = DISTINCTCOUNT(Kolkata_Schools[School Code])
+
+Total Students:
+
+Total Students = SUM(Kolkata_Schools[No of Students])
+
+Total Boroughs:
+
+Total Boroughs = DISTINCTCOUNT(Kolkata_Schools[Borough])
+
+Total Wards:
+
+Total Wards = DISTINCTCOUNT(Kolkata_Schools[Ward No])
+
+Average Students per School:
+
+Average Students per School = DIVIDE([Total Students], [Total Schools])
+
+============================================================ 9.
+DASHBOARD DESIGN
+============================================================
+
+The dashboard is designed as a single-page educational analytics
+overview.
+
+Main KPI cards:
+
+-   Schools
+-   Students
+-   Boroughs
+-   Wards
+
+Main visualizations:
+
+1.  Schools by Ward
+2.  Students by Borough
+3.  School Distribution by Student Size
+4.  Students by Ward
+5.  Schools by Type
+
+The dashboard uses these visuals to provide both high-level KPIs and
+detailed comparisons.
+
+============================================================ 10.
+VISUALIZATION ANALYSIS
+============================================================
+
+10.1 Schools by Ward
+
+The Schools by Ward visualization compares the number of schools across
+different wards. It helps identify wards with relatively higher or lower
+concentrations of schools.
+
+10.2 Students by Borough
+
+The Students by Borough visualization compares student populations
+across the different boroughs. It helps identify boroughs with
+relatively higher and lower student populations.
+
+10.3 School Distribution by Student Size
+
+Schools are grouped into student-size categories ranging from Very Small
+to Very Large. This visualization helps understand the distribution of
+schools according to their number of students.
+
+10.4 Students by Ward
+
+The Students by Ward visualization compares student populations across
+different wards. It provides a ward-level view of student concentration.
+
+10.5 Schools by Type
+
+The Schools by Type donut chart shows the relative distribution of
+schools according to their type/ownership, including categories such as
+OWNED and RENTED in the current dashboard.
+
+============================================================ 11. KEY
+FINDINGS ============================================================
+
+Based on the current dashboard:
+
+1.  The dataset represents 259 schools.
+2.  The dashboard covers 15 boroughs.
+3.  The dataset covers 106 wards.
+4.  The represented student population is approximately 28,000.
+5.  School distribution varies considerably across wards.
+6.  Student population varies considerably across boroughs and wards.
+7.  Schools can be grouped into different student-size categories.
+8.  The dataset includes both OWNED and RENTED school types.
+
+The dashboard therefore provides a useful descriptive view of the
+distribution of schools and students across Kolkata.
+
+============================================================ 12. USE
+CASE ============================================================
+
+The dashboard can be used for educational data analysis and urban
+education planning.
+
+Potential users include:
+
+-   Data analysts
+-   Educational researchers
+-   Urban planners
+-   Government and municipal analysts
+-   Educational administrators
+-   Students learning Power BI and data visualization
+
+The dashboard can help users compare school counts, student populations,
+boroughs, wards, and school types from a single interface.
+
+============================================================ 13.
+LIMITATIONS ============================================================
+
+The current project has several limitations:
+
+1.  The dataset is a static dataset rather than a live real-time data
+    source.
+2.  Latitude and longitude coordinates are not available.
+3.  Teacher information is not available.
+4.  Classroom capacity information is not available.
+5.  Historical student enrollment data is not available.
+6.  Ward-level population data is not available.
+7.  School performance and quality indicators are not available.
+8.  The current dataset cannot independently determine whether a school
+    is overcrowded because school capacity data is not available.
+
+Therefore, the project should be treated as a descriptive analytics
+dashboard rather than a complete education planning or overcrowding
+model.
+
+============================================================ 14. FUTURE
+SCOPE ============================================================
+
+The project can be expanded by integrating additional datasets.
+
+Possible improvements include:
+
+1.  Historical enrollment data for year-over-year trend analysis.
+2.  Teacher data for student-to-teacher ratio analysis.
+3.  Classroom capacity data for capacity analysis.
+4.  Ward population data for student population per 1,000 residents.
+5.  Reliable geographic boundary or school coordinate data for
+    geographic mapping.
+6.  School infrastructure data for infrastructure analysis.
+7.  School performance data for education quality analysis.
+8.  Automated database/API connections for regularly refreshed data.
+9.  Machine learning models for future student demand prediction.
+
+============================================================ 15.
+CONCLUSION ============================================================
+
+The Kolkata School Education Analytics Dashboard demonstrates how raw
+educational data can be transformed into meaningful insights using Power
+BI.
+
+The dashboard provides an overview of 259 schools, approximately 28K
+students, 15 boroughs, and 106 wards. It enables users to compare school
+distribution by ward, student population by borough and ward, school
+types, and school-size categories.
+
+The project demonstrates practical skills in data cleaning, Power Query,
+DAX, data visualization, and Power BI dashboard development.
+
+With additional demographic, historical, infrastructure, geographic, and
+capacity-related data, this project could be extended into a more
+advanced educational planning and predictive analytics solution.
+
+============================================================ END OF
+REPORT ============================================================
