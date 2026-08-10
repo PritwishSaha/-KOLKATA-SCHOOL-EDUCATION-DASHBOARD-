@@ -1,20 +1,16 @@
-🏫 Kolkata School Education Analytics Dashboard
+# 🏫 Kolkata School Education Analytics Dashboard
 
 <p align="center">
+  <img src="Screenshot 2026-08-10 052014.png" alt="Kolkata School Education Dashboard" width="100%">
+</p>
 
-<img src="images/dashboard.png" alt="Kolkata School Education Dashboard" width="100%">{=html}
-
+<p align="center">
+  <b>Power BI Data Analytics Project</b>
 </p>
 
 <p align="center">
 
-<b>{=html}Interactive Power BI Dashboard for Kolkata School & StudentAnalytics</b>{=html}
-
-</p>
-
-<p align="center">
-
-<img src="https://img.shields.io/badge/Power%20BI-Analytics-F2C811?style=for-the-badge&logo=powerbi&logoColor=black">{=html}<img src="https://img.shields.io/badge/Power%20Query-Data%20Cleaning-217346?style=for-the-badge">{=html}<img src="https://img.shields.io/badge/DAX-Data%20Modeling-512BD4?style=for-the-badge">{=html}<img src="https://img.shields.io/badge/CSV-Dataset-1F6FEB?style=for-the-badge">{=html}
+<img src="https://img.shields.io/badge/Power%20BI-Analytics-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"><img src="https://img.shields.io/badge/Power%20Query-Data%20Cleaning-217346?style=for-the-badge"><img src="https://img.shields.io/badge/DAX-Data%20Modeling-512BD4?style=for-the-badge"><img src="https://img.shields.io/badge/CSV-Dataset-1F6FEB?style=for-the-badge">
 
 </p>
 
